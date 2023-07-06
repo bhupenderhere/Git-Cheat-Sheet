@@ -1,0 +1,177 @@
+* {
+  margin: 0;
+  padding: 0;
+  color: #000000;
+  box-sizing: border-box;
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande", "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+}
+
+a {
+  color: #000000;
+  text-decoration: none;
+  position: relative;
+}
+a::after {
+  content: "";
+  left: 0;
+  right: 0;
+  bottom: -5px;
+  width: 100%;
+  height: 2px;
+  background-color: #000000;
+  position: absolute;
+}
+
+header {
+  display: flex;
+  opacity: 0.8;
+  align-items: center;
+  justify-content: space-between;
+  background: radial-gradient(circle, transparent 20%, #e5e5f7 20%, #e5e5f7 80%, transparent 80%, transparent), radial-gradient(circle, transparent 20%, #e5e5f7 20%, #e5e5f7 80%, transparent 80%, transparent) 25px 25px, linear-gradient(#cecece 2px, transparent 2px) 0 -1px, linear-gradient(90deg, #cecece 2px, #e5e5f7 2px) -1px 0;
+  background-size: 50px 50px, 50px 50px, 25px 25px, 25px 25px;
+}
+@media (max-width: 551px) {
+  header {
+    padding: 50px 25px;
+  }
+}
+@media (min-width: 551px) {
+  header {
+    padding: 50px 50px;
+  }
+}
+@media (min-width: 992px) {
+  header {
+    padding: 50px 100px;
+  }
+}
+header svg {
+  width: 60px;
+  height: 60px;
+  fill: #444cf7;
+}
+
+nav {
+  background-color: #444cf7;
+}
+@media (max-width: 551px) {
+  nav {
+    padding: 50px 25px;
+  }
+}
+@media (min-width: 551px) {
+  nav {
+    padding: 50px 50px;
+  }
+}
+@media (min-width: 992px) {
+  nav {
+    padding: 50px 100px;
+  }
+}
+nav p {
+  color: white;
+  text-align: justify;
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  background-color: #ffffff;
+}
+@media (max-width: 551px) {
+  main {
+    padding: 50px 25px;
+  }
+}
+@media (min-width: 551px) {
+  main {
+    padding: 50px 50px;
+  }
+}
+@media (min-width: 992px) {
+  main {
+    padding: 50px 100px;
+  }
+}
+main .common * {
+  text-align: justify;
+}
+main .separate summary {
+  margin-top: 20px;
+  padding: 10px 0 0 0;
+  border: 1px solid black;
+}
+main .separate summary code,
+main .separate summary p {
+  margin: 0 10px;
+}
+main .separate summary code {
+  font-size: 14px;
+  color: #444cf7;
+  font-weight: bold;
+  letter-spacing: 0.5px;
+  font-family: monospace;
+}
+main .separate summary p {
+  margin-bottom: 10px;
+}
+main .common,
+main .separate {
+  display: grid;
+  -moz-column-gap: 40px;
+       column-gap: 40px;
+  grid-template-columns: 1fr 1fr;
+}
+main .common h2,
+main .separate h2 {
+  margin-top: 40px;
+  margin-bottom: 10px;
+}
+main .common p,
+main .common a,
+main .separate p,
+main .separate a {
+  font-size: 14px;
+}
+
+@media (max-width: 1064px) {
+  main .separate {
+    grid-template-columns: 1fr;
+  }
+}
+@media (max-width: 772px) {
+  main .common {
+    grid-template-columns: 1fr;
+  }
+}
+footer {
+  gap: 40px;
+  opacity: 0.8;
+  display: flex;
+  margin-top: 40px;
+  align-items: center;
+  justify-content: space-between;
+  background: radial-gradient(circle, transparent 20%, #e5e5f7 20%, #e5e5f7 80%, transparent 80%, transparent), radial-gradient(circle, transparent 20%, #e5e5f7 20%, #e5e5f7 80%, transparent 80%, transparent) 25px 25px, linear-gradient(#cecece 2px, transparent 2px) 0 -1px, linear-gradient(90deg, #cecece 2px, #e5e5f7 2px) -1px 0;
+  background-size: 50px 50px, 50px 50px, 25px 25px, 25px 25px;
+}
+@media (max-width: 551px) {
+  footer {
+    padding: 50px 25px;
+  }
+}
+@media (min-width: 551px) {
+  footer {
+    padding: 50px 50px;
+  }
+}
+@media (min-width: 992px) {
+  footer {
+    padding: 50px 100px;
+  }
+}
+footer svg {
+  width: 60px;
+  height: 60px;
+  fill: #444cf7;
+}/*# sourceMappingURL=style.css.map */

@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>GitHub Cheat Sheet</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <header>
+      <div>
+        <h2>GitHub</h2>
+        <br />
+        <h1>GIT CHEAT SHEET</h1>
+      </div>
+      <svg width="16" height="16" viewBox="0 0 16 16">
+        <path
+          d="M15.698 7.287 8.712.302a1.03 1.03 0 0 0-1.457 0l-1.45 1.45 1.84 1.84a1.223 1.223 0 0 1 1.55 1.56l1.773 1.774a1.224 1.224 0 0 1 1.267 2.025 1.226 1.226 0 0 1-2.002-1.334L8.58 5.963v4.353a1.226 1.226 0 1 1-1.008-.036V5.887a1.226 1.226 0 0 1-.666-1.608L5.093 2.465l-4.79 4.79a1.03 1.03 0 0 0 0 1.457l6.986 6.986a1.03 1.03 0 0 0 1.457 0l6.953-6.953a1.031 1.031 0 0 0 0-1.457"
+        />
+      </svg>
+    </header>
+    <nav>
+      <p>
+        Git is the free and open source distributed version control system
+        that's responsible for everything GitHub related that happens locally on
+        your computer. This cheat sheet features the most important and commonly
+        used Git commands for easy reference.
+      </p>
+    </nav>
+    <main>
+      <section class="common">
+        <div>
+          <div>
+            <h2>INSTALLATION & GUIS</h2>
+            <p>
+              With platform specific installers for Git, GitHub also provides
+              the ease of staying up-to-date with the latest releases of the
+              command line tool while providing a graphical user interface for
+              day-to-day interaction, review, and repository synchronization.
+            </p>
+          </div>
+          <div>
+            <h2>GitHub for Windows</h2>
+            <a href="https://windows.github.com" target="_blank"
+              >Download From Here</a
+            >
+          </div>
+        </div>
+        <div>
+          <div>
+            <h2>GitHub for Mac</h2>
+            <a href="https://mac.github.com" target="_blank"
+              >Download From Here</a
+            ><br />
+            <br />
+            <p>
+              For Linux and Solaris platforms, the latest release is available
+              on the official Git web site.
+            </p>
+          </div>
+          <div>
+            <h2>Git for All Platforms</h2>
+            <a href="http://git-scm.com" target="_blank">Download From Here</a>
+          </div>
+        </div>
+      </section>
+      <section class="separate">
+        <section>
+          <div>
+            <h2>SETUP</h2>
+            <p>
+              Configuring user information used across all local repositories
+            </p>
+            <summary>
+              <code>
+                git config --global user.name “[firstname lastname]”
+              </code>
+              <p>
+                set a name that is identifiable for credit when review version
+                history
+              </p>
+              <code> git config --global user.email “[valid-email]” </code>
+              <p>
+                set an email address that will be associated with each history
+                marker
+              </p>
+              <code> git config --global color.ui auto </code>
+              <p>
+                set automatic command line coloring for Git for easy reviewing
+              </p>
+            </summary>
+          </div>
+          <div>
+            <h2>SETUP & INIT</h2>
+            <p>
+              Configuring user information, initializing and cloning
+              repositories
+            </p>
+            <summary>
+              <code> git init</code>
+              <p>initialize an existing directory as a Git repository</p>
+              <code> git clone [url]</code>
+              <p>
+                retrieve an entire repository from a hosted location via URL
+              </p>
+            </summary>
+          </div>
+          <div>
+            <h2>INSPECT & COMPARE</h2>
+            <p>Examining logs, diffs and object information</p>
+            <summary>
+              <code> git log</code>
+              <p>show the commit history for the currently active branch</p>
+              <code> git log branchB..branchA</code>
+              <p>show the commits on branchA that are not on branchB</p>
+              <code> git log --follow [file]</code>
+              <p>show the commits that changed file, even across renames</p>
+              <code> git diff branchB...branchA</code>
+              <p>show the diff of what is in branchA that is not in branchB</p>
+              <code>git show [SHA]</code>
+              <p>show any object in Git in human-readable format</p>
+            </summary>
+          </div>
+          <div>
+            <h2>STAGE & SNAPSHOT</h2>
+            <p>Working with snapshots and the Git staging area</p>
+            <summary>
+              <code> git status </code>
+              <p>
+                show modified files in working directory, staged for your next
+                commit
+              </p>
+              <code> git add [file] </code>
+              <p>add a file as it looks now to your next commit (stage)</p>
+              <code> git reset [file] </code>
+              <p>
+                unstage a file while retaining the changes in working directory
+              </p>
+              <code> git diff </code>
+              <p>diff of what is changed but not staged</p>
+              <code> git diff --staged </code>
+              <p>diff of what is staged but not yet commited</p>
+              <code> git commit -m “[descriptive message]” </code>
+              <p>commit your staged content as a new commit snapshot</p>
+            </summary>
+          </div>
+          <div>
+            <h2>IGNORING PATTERNS</h2>
+            <p>Preventing unintentional staging or commiting of files</p>
+            <summary>
+              <code>
+                logs/ <br />
+                &nbsp;*.notes
+              </code>
+              <p>
+                Save a file with desired paterns as .gitignore with either
+                direct string matches or wildcard globs.
+              </p>
+              <code> git config --global core.excludesfile [file]</code>
+              <p>system wide ignore patern for all local repositories</p>
+            </summary>
+          </div>
+        </section>
+        <section>
+          <div>
+            <h2>TRACKING PATH CHANGES</h2>
+            <p>Versioning file removes and path changes</p>
+            <summary>
+              <code> git rm [file]</code>
+              <p>
+                delete the file from project and stage the removal for commit
+              </p>
+              <code> git mv [existing-path] [new-path]</code>
+              <p>change an existing file path and stage the move</p>
+              <code> git log --stat -M</code>
+              <p>
+                show all commit logs with indication of any paths that moved
+              </p>
+            </summary>
+          </div>
+          <div>
+            <h2>BRANCH & MERGE</h2>
+            <p>
+              Isolating work in branches, changing context, and integrating
+              changes
+            </p>
+            <summary>
+              <code> git branch </code>
+              <p>
+                list your branches. a * will appear next to the currently active
+                branch
+              </p>
+              <code> git branch [branch-name] </code>
+              <p>create a new branch at the current commit</p>
+              <code> git checkout </code>
+              <p>
+                switch to another branch and check it out into your working
+                directory
+              </p>
+              <code> git merge [branch] </code>
+              <p>merge the specified branch's history into the current one</p>
+              <code> git log </code>
+              <p>show all commits in the current branch's history</p>
+            </summary>
+          </div>
+          <div>
+            <h2>SHARE & UPDATE</h2>
+            <p>
+              Retrieving updates from another repository and updating local
+              repos
+            </p>
+            <summary>
+              <code> git remote add [alias] [url] </code>
+              <p>add a git URL as an alias</p>
+              <code> git fetch [alias] </code>
+              <p>fetch down all the branches from that Git remote</p>
+              <code> git merge [alias]/[branch] </code>
+              <p>
+                merge a remote branch into your current branch to bring it up to
+                date
+              </p>
+              <code> git push [alias] [branch] </code>
+              <p>
+                Transmit local branch commits to the remote repository branch
+              </p>
+              <code> git pull </code>
+              <p>fetch and merge any commits from the tracking remote branch</p>
+            </summary>
+          </div>
+          <div>
+            <h2>REWRITE HISTORY</h2>
+            <p>Rewriting branches, updating commits and clearing history</p>
+            <summary>
+              <code> git rebase [branch] </code>
+              <p>apply any commits of current branch ahead of specified one</p>
+              <code> git reset --hard [commit] </code>
+              <p>
+                clear staging area, rewrite working tree from specified commit
+              </p>
+            </summary>
+          </div>
+          <div>
+            <h2>TEMPORARY COMMITS</h2>
+            <p>
+              Temporarily store modified, tracked files in order to change
+              branches
+            </p>
+            <summary>
+              <code> git stash </code>
+              <p>Save modified and staged changes</p>
+              <code> git stash list </code>
+              <p>list stack-order of stashed file changes</p>
+              <code> git stash pop </code>
+              <p>write working from top of stash stack</p>
+              <code> git stash drop </code>
+              <p>discard the changes from top of stash stack</p>
+            </summary>
+          </div>
+        </section>
+      </section>
+    </main>
+    <footer>
+      <svg width="16" height="16" viewBox="0 0 16 16">
+        <path
+          d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.012 8.012 0 0 0 16 8c0-4.42-3.58-8-8-8z"
+        />
+      </svg>
+      <small>
+        Made with ❤️ By
+        <a href="https://www.github.com/bhupenderhere" target="_blank"
+          >Bhupender</a
+        >
+      </small>
+    </footer>
+  </body>
+</html>
